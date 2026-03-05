@@ -145,3 +145,9 @@ body {
   }
 }
 
+.hobby-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
