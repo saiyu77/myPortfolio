@@ -151,3 +151,17 @@ body {
   margin: 20px 0;
   flex-wrap: wrap;
 }
+
+.drawing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.drawing-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   
+  object-fit: cover;      
+  border-radius: 8px;
+}
