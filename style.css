@@ -150,6 +150,7 @@ body {
   gap: 12px;
   margin: 20px 0;
   flex-wrap: wrap;
+  justify-content: center;  
 }
 
 .drawing-grid {
