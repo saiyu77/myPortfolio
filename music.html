@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music | Saiyu Rajbhandari</title>
+  <link rel="stylesheet" href="music.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎵 My Music</h1>
+    </div>
+
+    <!-- Currently Obsessed With -->
+    <div class="now-playing">
+      <span class="now-label">🎧 Currently obsessed with</span>
+      <span class="now-song">Supernatural — NewJeans</span>
+    </div>
+
+    <!-- K-POP Section -->
+    <div class="genre-section kpop">
+      <h2>K-Pop</h2>
+      <div class="artist-cards">
+
+        <div class="card">
+          <h3>TWICE</h3>
+          <ul>
+            <li>Fancy</li>
+            <li>Feel Special</li>
+            <li>Talk That Talk</li>
+          </ul>
+          <a href="https://www.youtube.com/@TWICE" target="_blank" class="music-btn">YouTube ↗</a>
+        </div>
+
+        <div class="card">
+          <h3>NewJeans</h3>
+          <ul>
+            <li>Hype Boy</li>
+            <li>Supernatural</li>
+            <li>OMG</li>
+          </ul>
+          <a href="https://www.youtube.com/@NewJeans" target="_blank" class="music-btn">YouTube ↗</a>
+        </div>
+
+        <div class="card">
+          <h3>TXT</h3>
+          <ul>
+            <li>0X1=LOVESONG</li>
+            <li>Sugar Rush Ride</li>
+            <li>Ghosting</li>
+          </ul>
+          <a href="https://www.youtube.com/@TXT" target="_blank" class="music-btn">YouTube ↗</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Western Section -->
+    <div class="genre-section western">
+      <h2>Western</h2>
+      <div class="artist-cards">
+
+        <div class="card">
+          <h3>Billie Eilish</h3>
+          <ul>
+            <li>Lovely</li>
+            <li>Happier Than Ever</li>
+            <li>Birds of a Feather</li>
+          </ul>
+          <a href="https://www.youtube.com/@BillieEilish" target="_blank" class="music-btn">YouTube ↗</a>
+        </div>
+
+        <div class="card">
+          <h3>Bebe Rexha</h3>
+          <ul>
+            <li>Me Myself & I</li>
+            <li>In The Name Of Love</li>
+            <li>Sabotage</li>
+          </ul>
+          <a href="https://www.youtube.com/@BebeRexha" target="_blank" class="music-btn">YouTube ↗</a>
+        </div>
+
+        <!-- Add more western artists here -->
+
+      </div>
+    </div>
+
+    <div class="back">
+      <a href="hobbies.html" class="btn">Back</a>
+    </div>
+  </div>
+
+<script>
+  // makes cards slightly tilt on mouse move for fun effect
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      card.style.transform = `rotateY(${x / 20}deg) rotateX(${-y / 20}deg) scale(1.03)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateY(0) rotateX(0) scale(1)';
+    });
+  });
+</script>
+</body>
+</html>

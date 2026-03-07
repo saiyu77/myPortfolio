@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #fff5fa);
+  min-height: 100vh;
+  overflow-y: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  background: #ffffffd9;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+/* Currently obsessed with */
+.now-playing {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff0f5;
+  border: 1px solid #ffb6c1;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.now-label {
+  color: #d63384;
+  font-weight: 600;
+}
+
+.now-song {
+  color: #333;
+}
+
+/* Genre sections */
+.genre-section {
+  margin-bottom: 40px;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: left;
+}
+
+.genre-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* K-Pop — soft purple mood */
+.kpop {
+  background: linear-gradient(135deg, #f3e8ff, #fce4f5);
+  border-left: 5px solid #c084fc;
+}
+
+.kpop h2 { color: #9333ea; }
+
+/* Western — soft blue mood */
+.western {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  border-left: 5px solid #60a5fa;
+}
+
+.western h2 { color: #2563eb; }
+
+/* Artist cards */
+.artist-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #ffffffcc;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  perspective: 600px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.card ul li {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 3px 0;
+  border-bottom: 1px dashed #f9c4d4;
+}
+
+.card ul li:last-child {
+  border-bottom: none;
+}
+
+/* Spotify/YouTube button */
+.music-btn {
+  display: inline-block;
+  background: #ffb6c1;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.music-btn:hover {
+  background: #ff99b8;
+  transform: translateY(-2px);
+}
+
+/* Back button */
+.btn {
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff99b8;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+}
+
+.back {
+  margin-top: 30px;
+  text-align: center;
+}
