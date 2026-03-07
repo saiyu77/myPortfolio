@@ -9,27 +9,46 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>Drawing</h1>
+      <h1>My Drawings</h1>
     </div>
       <div class="drawing-grid">
-        <img src="d/dolphin.jpg" alt="dolphin drawing">
-        <img src="d/sunflower.jpg" alt="sunflower drawing">
-        <img src="d/boat.jpg" alt="boat drawing">
-        <img src="d/waterfall.jpg" alt="waterfall drawing">
-        <img src="d/free.jpg" alt="free drawing">
-        <img src="d/witch.jpg" alt="witch drawing">
-        <img src="d/light.jpg" alt="light drawing">
-        <img src="d/moon.jpg" alt="moon drawing">
-        <img src="d/anya.jpg" alt="anya drawing">
-        <img src="d/blink.jpg" alt="blink drawing">
-        <img src="d/heart.jpg" alt="heart drawing">
-        <img src="d/evilcat.jpg" alt="cat drawing">
+        <img src="d/dolphin.jpg" alt="dolphin drawing" onclick="openLightbox(this)">
+        <img src="d/sunflower.jpg" alt="sunflower drawing" onclick="openLightbox(this)">
+        <img src="d/boat.jpg" alt="boat drawing" onclick="openLightbox(this)">
+        <img src="d/waterfall.jpg" alt="waterfall drawing" onclick="openLightbox(this)">
+        <img src="d/free.jpg" alt="free drawing" onclick="openLightbox(this)">
+        <img src="d/witch.jpg" alt="witch drawing" onclick="openLightbox(this)">
+        <img src="d/light.jpg" alt="light drawing" onclick="openLightbox(this)">
+        <img src="d/moon.jpg" alt="moon drawing" onclick="openLightbox(this)">
+        <img src="d/anya.jpg" alt="anya drawing" onclick="openLightbox(this)">
+        <img src="d/blink.jpg" alt="blink drawing" onclick="openLightbox(this)">
+        <img src="d/heart.jpg" alt="heart drawing" onclick="openLightbox(this)">
+        <img src="d/evilcat.jpg" alt="cat drawing" onclick="openLightbox(this)">
+        <img src="d/catss.jpeg" alt="cat drawing" onclick="openLightbox(this)">
+        <img src="d/njs.jpeg" alt="cat drawing" onclick="openLightbox(this)">
       </div>
-
       <div class="back">
         <a href="hobbies.html" class="btn">Back</a>
       </div>
   </div>
+  <!-- Lightbox overlay -->
+<div class="lightbox" id="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">✕</span>
+  <img id="lightbox-img" src="" alt="Full view">
+</div>
+<script>
+  function openLightbox(img) {
+    document.getElementById("lightbox-img").src = img.src;
+    document.getElementById("lightbox").classList.add("active");
+  }
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+  }
+  document.getElementById("lightbox").addEventListener("click", function(e) {
+    if (e.target === this) closeLightbox();
+  });
+</script>
 </body>
 </html>
+
 
