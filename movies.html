@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies | Saiyu Rajbhandari</title>
+  <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎬 My Watch List</h1>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="showCategory('kdrama')">K-Drama</button>
+      <button class="tab" onclick="showCategory('anime')">Anime</button>
+      <button class="tab" onclick="showCategory('cdrama')">C-Drama</button>
+      <button class="tab" onclick="showCategory('animated')">Animated Movies</button>
+      <button class="tab" onclick="showCategory('english')">English</button>
+      <button class="tab" onclick="showCategory('hindi')">Hindi</button>
+    </div>
+
+    <!-- K-Drama -->
+    <div class="category active" id="kdrama">
+      <div class="tier">
+        <div class="tier-label s-tier">❤️ Top Fav</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge s">S</span> Crash Landing on You</div>
+          <div class="card"><span class="badge s">S</span> Reply 1988</div>
+          <div class="card"><span class="badge s">S</span> Goblin</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label a-tier">👍 Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge a">A</span> My Love From the Star</div>
+          <div class="card"><span class="badge a">A</span> Hometown Cha-Cha-Cha</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label b-tier">😐 Not Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge b">B</span> Boys Over Flowers</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label c-tier">🩸 Gore / Action</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge c">C</span> Squid Game</div>
+          <div class="card"><span class="badge c">C</span> All of Us Are Dead</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Anime -->
+    <div class="category" id="anime">
+      <div class="tier">
+        <div class="tier-label s-tier">❤️ Top Fav</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge s">S</span> Spirited Away</div>
+          <div class="card"><span class="badge s">S</span> Your Lie in April</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label a-tier">👍 Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge a">A</span> Violet Evergarden</div>
+          <div class="card"><span class="badge a">A</span> Fruits Basket</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label b-tier">😐 Not Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge b">B</span> Sword Art Online</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label c-tier">🩸 Gore / Action</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge c">C</span> Attack on Titan</div>
+          <div class="card"><span class="badge c">C</span> Demon Slayer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- C-Drama -->
+    <div class="category" id="cdrama">
+      <div class="tier">
+        <div class="tier-label s-tier">❤️ Top Fav</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge s">S</span> Word of Honor</div>
+          <div class="card"><span class="badge s">S</span> The Untamed</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label a-tier">👍 Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge a">A</span> Love O2O</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label b-tier">😐 Not Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge b">B</span> Put your titles here</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label c-tier">🩸 Gore / Action</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge c">C</span> Put your titles here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated -->
+    <div class="category" id="animated">
+      <div class="tier">
+        <div class="tier-label s-tier">❤️ Top Fav</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge s">S</span> Encanto</div>
+          <div class="card"><span class="badge s">S</span> Turning Red</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label a-tier">👍 Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge a">A</span> Moana</div>
+          <div class="card"><span class="badge a">A</span> Coco</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label b-tier">😐 Not Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge b">B</span> Put your titles here</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label c-tier">🩸 Gore / Action</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge c">C</span> Put your titles here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div class="category" id="english">
+      <div class="tier">
+        <div class="tier-label s-tier">❤️ Top Fav</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge s">S</span> The Perks of Being a Wallflower</div>
+          <div class="card"><span class="badge s">S</span> Interstellar</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label a-tier">👍 Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge a">A</span> La La Land</div>
+          <div class="card"><span class="badge a">A</span> The Greatest Showman</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label b-tier">😐 Not Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge b">B</span> Put your titles here</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label c-tier">🩸 Gore / Action</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge c">C</span> Put your titles here</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hindi -->
+    <div class="category" id="hindi">
+      <div class="tier">
+        <div class="tier-label s-tier">❤️ Top Fav</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge s">S</span> Zindagi Na Milegi Dobara</div>
+          <div class="card"><span class="badge s">S</span> 3 Idiots</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label a-tier">👍 Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge a">A</span> Taare Zameen Par</div>
+          <div class="card"><span class="badge a">A</span> Dil Dhadakne Do</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label b-tier">😐 Not Recommend</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge b">B</span> Put your titles here</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-label c-tier">🩸 Gore / Action</div>
+        <div class="tier-cards">
+          <div class="card"><span class="badge c">C</span> Put your titles here</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="back">
+      <a href="hobbies.html" class="btn">Back</a>
+    </div>
+  </div>
+
+  <script>
+    function showCategory(id) {
+      document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
