@@ -7,7 +7,15 @@
 }
 
 body {
-  background: linear-gradient(to bottom right, #ffe6f0, #fff5fa);
+  background: 
+    linear-gradient(to bottom right, rgba(255, 230, 240, 0.7), rgba(255, 245, 250, 0.7)),
+    url('d/mmm.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  
+  
   color: #333;
   display: flex;
   justify-content: center;
@@ -166,3 +174,4 @@ body {
   object-fit: cover;      
   border-radius: 8px;
 }
+
