@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #ffe6f0, #fff5fa);
+  color: #333;
+  min-height: 100vh;
+  overflow-y: auto;        /* allows scrolling */
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  text-align: center;
+  background: #ffffffd9;
+  border-radius: 20px;
+  padding: 50px 30px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  color: #d63384;
+  margin-bottom: 40px;
+}
+
+.drawing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.drawing-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.btn {
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff99b8;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 182, 193, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #ffb6c1;
+}
+
+/* make grid images feel clickable */
+.drawing-grid img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.drawing-grid img:hover {
+  transform: scale(1.03);
+}
