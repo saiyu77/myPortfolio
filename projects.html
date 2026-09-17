@@ -5,19 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Saiyu Rajbhandari</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
 </head>
-<body>
-  <div class="container">
+<body class="projects-body">
+  <div class="container projects-container">
     <div class="header">
       <h1>Projects</h1>
     </div>
 
     <div class="content">
-      <p>Here are some of my projects:</p>
-      <ul style="list-style:none; padding-top:10px; color:#555;">
-        <li>💌 Email Spam Detection (Machine Learning)</li>
-        <li>🧭 Explore Northeast Sikkim (Tourism Project)</li>
-      </ul>
+      <p>Click a book to open it 📖</p>
+
+      <div class="book-shelf">
+
+        <!-- Project 1: Tourism site -->
+        <div class="book" onclick="this.classList.toggle('open')">
+          <div class="book-cover">
+            <span class="book-icon">🧭</span>
+            <h3>Explore Northeast Sikkim</h3>
+            <span class="book-hint">tap to open</span>
+          </div>
+          <div class="book-pages">
+            <button class="close-btn" onclick="event.stopPropagation(); this.closest('.book').classList.remove('open')">✕</button>
+            <h2>Explore Northeast Sikkim</h2>
+            <p class="book-tag">Tourism Website</p>
+            <p>A website built to showcase destinations, culture, and travel info for Northeast Sikkim, designed to help visitors explore the region more easily.</p>
+            <p><em>Note: the live site was lost when my laptop was formatted — the video below is a walkthrough recording of it in action.</em></p>
+            <div class="media-slot">
+              <video controls poster="d/paws.jpeg">
+                <source src="d/exploring.mp4" type="video/mp4">
+                Your browser doesn't support embedded video — the file is linked below instead.
+              </video>
+            </div>
+            <div class="back">
+              <a href="d/exploring.mp4" class="btn" download>Download Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Email spam detection -->
+        <div class="book" onclick="this.classList.toggle('open')">
+          <div class="book-cover">
+            <span class="book-icon">💌</span>
+            <h3>An NLP-Based Email Spam Detection</h3>
+            <span class="book-hint">tap to open</span>
+          </div>
+          <div class="book-pages">
+            <button class="close-btn" onclick="event.stopPropagation(); this.closest('.book').classList.remove('open')">✕</button>
+            <h2>An NLP-Based Email Spam Detection</h2>
+            <p class="book-tag">Machine Learning</p>
+            <p>A machine learning project that classifies emails as spam or not spam, including the full report and supporting files.</p>
+            <div class="back">
+              <a href="Email_Spam_Project_Report.pdf" class="btn" download>View Report</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
       <div class="back">
         <a href="index.html" class="btn">Back</a>
       </div>

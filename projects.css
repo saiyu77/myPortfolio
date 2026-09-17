@@ -1,0 +1,152 @@
+/* Projects page needs more room than the other pages, so override the
+   fixed-height centered body just for this page */
+.projects-body {
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+  padding: 40px 0;
+}
+
+.projects-container {
+  max-width: 700px;
+}
+
+.book-shelf {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  perspective: 1200px;
+}
+
+.book {
+  position: relative;
+  width: 180px;
+  height: 240px;
+  cursor: pointer;
+}
+
+.book-cover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #ffb6c1, #ff8fab);
+  border-radius: 10px 14px 14px 10px;
+  box-shadow:
+    0 6px 16px rgba(255, 105, 180, 0.35),
+    inset -6px 0 0 rgba(0, 0, 0, 0.08); /* spine effect */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.5s ease, opacity 0.4s ease;
+  transform-origin: left center;
+}
+
+.book-cover h3 {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.book-icon {
+  font-size: 2.2rem;
+}
+
+.book-hint {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  margin-top: auto;
+}
+
+.book-pages {
+  position: absolute;
+  inset: 0;
+  background: #fffdfd;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.4);
+  padding: 24px 20px;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.96);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  overflow-y: auto;
+}
+
+/* Open state: cover flips away, pages expand and take over the shelf spot */
+.book.open {
+  width: min(90vw, 480px);
+  height: min(80vh, 520px);
+  z-index: 5;
+}
+
+.book.open .book-cover {
+  transform: rotateY(-100deg);
+  opacity: 0;
+}
+
+.book.open .book-pages {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.book-pages h2 {
+  color: #d63384;
+  margin-bottom: 4px;
+}
+
+.book-tag {
+  display: inline-block;
+  background: #ffe3ea;
+  color: #d63384;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.book-pages p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #d6338c;
+  cursor: pointer;
+}
+
+.media-slot video {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Backdrop so the shelf doesn't look empty behind an open book */
+.book.open ~ .book {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .book {
+    width: 140px;
+    height: 190px;
+  }
+  .book.open {
+    width: 90vw;
+    height: 75vh;
+  }
+}

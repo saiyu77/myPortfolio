@@ -1,0 +1,70 @@
+.games-body {
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+  padding: 40px 0;
+}
+
+.games-container {
+  max-width: 480px;
+}
+
+.game-title {
+  color: #d63384;
+  margin-top: 10px;
+}
+
+#status {
+  color: #555;
+  margin: 10px 0 20px;
+  font-weight: 600;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto 24px;
+}
+
+.cell {
+  aspect-ratio: 1 / 1;
+  background: #fff0f4;
+  border: 2px solid #ffb6c1;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d63384;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.cell:hover {
+  background: #ffe3ea;
+  transform: translateY(-2px);
+}
+
+.cell.x {
+  color: #d63384;
+}
+
+.cell.o {
+  color: #ff8fab;
+}
+
+.cell.win {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+.back {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.back button.btn {
+  font-family: inherit;
+}
